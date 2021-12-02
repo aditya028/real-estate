@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Property({ item }) {
   return (
@@ -7,12 +8,12 @@ function Property({ item }) {
         <img src={`${item.image}`} className="card-img-top" alt="..." />
         <div className="card-body">
           <h5 className="card-title">{item.title}</h5>
-          <a href={`/details/${item.id}`} className="btn btn-primary m-2">
+          <Link to={`/detail/${item.id}`} className="btn btn-primary m-2">
             Details
-          </a>
-          <a href={`/tenant/${item.id}`} className="btn btn-primary m-2">
+          </Link>
+          <Link to={`/tenant/${item.id}`} className="btn btn-primary m-2">
             Tenant
-          </a>
+          </Link>
         </div>
       </div>
     </div>
